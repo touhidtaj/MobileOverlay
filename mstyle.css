@@ -1,0 +1,183 @@
+.purple_wrapper * {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+.purple_wrapper img {
+  background: transparent !important;
+}
+#purple_image_overlay_section {
+  position: relative;
+}
+.purple_wrapper {
+  bottom: 0;
+  width: 320px;
+  height: 90px;
+  position: absolute;
+  background: url("bg.png?v=1.1");
+  cursor: pointer;
+  background-size: 100% 70px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.purple_slide {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.purple_slide_1 .creative_1 {
+  width: 66px;
+  height: 19px;
+  left: 3px;
+  bottom: 36px;
+}
+.purple_slide_1 .creative_2 {
+  width: 94px;
+  height: 34px;
+  left: 17px;
+  bottom: 1px;
+}
+.purple_slide_1 .creative_3 {
+  width: 68px;
+  height: 25px;
+  right: 89px;
+  bottom: 6px;
+}
+.purple_slide_1 .creative_4 {
+  width: 39px;
+  height: 70px;
+  right: 54px;
+  bottom: 0px;
+}
+.purple_slide_1 .creative_5 {
+  width: 50px;
+  height: 45px;
+  right: 9px;
+  bottom: 5px;
+}
+
+.absolute {
+  position: absolute;
+}
+.hidden {
+  display: none;
+}
+
+.smallLarge {
+  animation: smallLarge 8s linear 0.1s infinite alternate both;
+}
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes smallLarge {
+  12%,
+  76% {
+    transform: translate3d(0px, 0px, 0);
+    opacity: 1;
+  }
+  8% {
+    opacity: 1;
+  }
+  2%,
+  0%,
+  82%,
+  100% {
+    transform: translate3d(0px, 0px, 0);
+    opacity: 1;
+  }
+  22%,
+  42%,
+  62% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  32%,
+  52%,
+  72% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+/*info css*/
+.purple_generic_close {
+  position: absolute;
+  bottom: 65px;
+  right: 5px;
+  background: url("close.svg") no-repeat;
+  background-size: 100% 100%;
+  width: 15px;
+  height: 15px;
+  -webkit-animation: fadeIn24 1s 0.4s both;
+  animation: fadeIn24 1s 0.4s both;
+  cursor: pointer;
+  margin: 0 !important;
+  z-index: 1;
+}
+.purple_generic_icon {
+  position: absolute;
+  bottom: 48px;
+  right: 5px;
+  background: url("info.svg") no-repeat;
+  background-size: 100% 100%;
+  width: 15px;
+  height: 15px;
+  -webkit-animation: fadeIn24 1s 0.4s both;
+  animation: fadeIn24 1s 0.4s both;
+  cursor: pointer;
+  margin: 0 !important;
+  z-index: 1;
+}
+@keyframes hideZoomOut {
+  100% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+@keyframes showZoomIn {
+  from {
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes topBottom {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.hideZoomOut {
+  animation-name: hideZoomOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+.showZoomIn {
+  animation-name: showZoomIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+.topBottom {
+  animation-name: topBottom;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
